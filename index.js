@@ -8,8 +8,8 @@ const figlet = require('figlet');
 rbx.cookieLogin(config.cookie);
 
 client.on("ready", () => {
-    console.log(chalk.yellow(figlet.textSync('qbot', { horizontalLayout: 'full' })));
-    console.log(chalk.yellow(`PhantomRank started! This bot is currently helping ${client.users.size} users in ${client.users.size} channels of ${client.guilds.size} server.`));
+    console.log(chalk.magenta(figlet.textSync('PhantonRank', { horizontalLayout: 'full' })));
+    console.log(chalk.magenta(`PhantomRank started! This bot is currently helping ${client.users.size} users in ${client.users.size} channels of ${client.guilds.size} server.`));
 });
 
 let onShout = rbx.onShout(config.groupId);
