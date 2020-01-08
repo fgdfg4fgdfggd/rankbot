@@ -120,7 +120,7 @@ inquirer.prompt(initq).then(answers => {
             fs.writeFile('./config.json', JSON.stringify(configFile), (err) => {
                 if (err) console.log(err);
             });
-            console.log(chalk.green('Your qbot configuration has been successfully updated.'));
+            console.log(chalk.green('PhantomRank configuration has been successfully updated.'));
         });
     }
 });
