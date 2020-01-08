@@ -66,10 +66,10 @@ client.on("message", async message => {
     };
 
     if(command === "setrank") {
-        if(!message.member.roles.some(r=>["Ranking Permissions"].includes(r.name)) )
+        if(!message.member.roles.some(r=>["RCD Ranking Perms"].includes(r.name)) )
             return message.channel.send({embed: {
                 color: 15406156,
-                description: "You need the `Ranking Permissions` role to run this command.",
+                description: "You need the `RCD Ranking Perms` role to run this command.",
                 author: {
                     name: message.author.tag,
                     icon_url: message.author.displayAvatarURL
@@ -93,7 +93,7 @@ client.on("message", async message => {
                         if(config.maximumRank <= rank){
                             message.channel.send({embed: {
                                 color: 15406156,
-                                description: "This rank cannot be ranked by this bot.",
+                                description: "This rank cannot be ranked by PhantomRank.",
                                 author: {
                                     name: message.author.tag,
                                     icon_url: message.author.displayAvatarURL
@@ -131,7 +131,7 @@ client.on("message", async message => {
                                 console.log(chalk.red('Issue with setRank: ' + err));
                                 message.channel.send({embed: {
                                     color: 15406156, 
-                                    description: "Oops! Something went wrong. The issue has been logged to the bot console.",
+                                    description: "Oops! Something went wrong. The issue has been logged.",
                                     author: {
                                         name: message.author.tag,
                                         icon_url: message.author.displayAvatarURL
@@ -142,7 +142,7 @@ client.on("message", async message => {
                     }).catch(function(err){
                         message.channel.send({embed: {
                             color: 15406156,
-                            description: "Oops! Something went wrong. The issue has been logged to the bot console.",
+                            description: "Oops! Something went wrong. The issue has been logged.",
                             author: {
                                 name: message.author.tag,
                                 icon_url: message.author.displayAvatarURL
@@ -152,7 +152,7 @@ client.on("message", async message => {
                 }).catch(function(err){
                     message.channel.send({embed: {
                         color: 15406156,
-                        description: `Oops! ${username} does not exist in the Roblox user database. Perhaps you misspelled?`,
+                        description: `${username} does not exist in the RCD Group. Perhaps you misspelled?`,
                         author: {
                             name: message.author.tag,
                             icon_url: message.author.displayAvatarURL
@@ -173,10 +173,10 @@ client.on("message", async message => {
     }
 
     if(command === "promote") {
-        if(!message.member.roles.some(r=>["Ranking Permissions"].includes(r.name)) )
+        if(!message.member.roles.some(r=>["RCD Ranking Perms"].includes(r.name)) )
             return message.channel.send({embed: {
                 color: 15406156,
-                description: "You need the `Ranking Permissions` role to run this command.",
+                description: "You need the `RCD Ranking Perms` role to run this command.",
                 author: {
                     name: message.author.tag,
                     icon_url: message.author.displayAvatarURL
@@ -191,7 +191,7 @@ client.on("message", async message => {
                         if(config.maximumRank <= rank){
                             message.channel.send({embed: {
                                 color: 15406156,
-                                description: "This rank cannot be promoted by this bot.",
+                                description: "This rank cannot be promoted by PhantomRank.",
                                 author: {
                                     name: message.author.tag,
                                     icon_url: message.author.displayAvatarURL
@@ -240,7 +240,7 @@ client.on("message", async message => {
                     }).catch(function(err){
                         message.channel.send({embed: {
                             color: 15406156,
-                            description: "Oops! Something went wrong. The issue has been logged to the bot console.",
+                            description: "Something went wrong. The issue has been logged.",
                             author: {
                                 name: message.author.tag,
                                 icon_url: message.author.displayAvatarURL
@@ -250,7 +250,7 @@ client.on("message", async message => {
                 }).catch(function(err){
                     message.channel.send({embed: {
                         color: 15406156,
-                        description: `Oops! ${username} does not exist in the Roblox user database. Perhaps you misspelled?`,
+                        description: `${username} does not exist in the RCD Group. Perhaps you misspelled?`,
                         author: {
                             name: message.author.tag,
                             icon_url: message.author.displayAvatarURL
@@ -271,10 +271,10 @@ client.on("message", async message => {
     }
 
     if(command === "demote") {
-        if(!message.member.roles.some(r=>["Ranking Permissions"].includes(r.name)) )
+        if(!message.member.roles.some(r=>["RCD Ranking Perms"].includes(r.name)) )
             return message.channel.send({embed: {
                 color: 15406156,
-                description: "You need the `Ranking Permissions` role to run this command.",
+                description: "You need the `RCD Ranking Perms` role to run this command.",
                 author: {
                     name: message.author.tag,
                     icon_url: message.author.displayAvatarURL
@@ -289,7 +289,7 @@ client.on("message", async message => {
                         if(config.maximumRank <= rank){
                             message.channel.send({embed: {
                                 color: 15406156,
-                                description: "This rank cannot be ranked by this bot.",
+                                description: "This rank cannot be ranked by PhantomRank.",
                                 author: {
                                     name: message.author.tag,
                                     icon_url: message.author.displayAvatarURL
@@ -327,7 +327,7 @@ client.on("message", async message => {
                                 console.log(chalk.red('Issue with demote: ' + err));
                                 message.channel.send({embed: {
                                     color: 15406156, 
-                                    description: "Oops! Something went wrong. The issue has been logged to the bot console.",
+                                    description: "Something went wrong. The issue has been logged.",
                                     author: {
                                         name: message.author.tag,
                                         icon_url: message.author.displayAvatarURL
@@ -338,7 +338,7 @@ client.on("message", async message => {
                     }).catch(function(err){
                         message.channel.send({embed: {
                             color: 15406156,
-                            description: "Oops! Something went wrong. The issue has been logged to the bot console.",
+                            description: "Something went wrong. The issue has been logged.",
                             author: {
                                 name: message.author.tag,
                                 icon_url: message.author.displayAvatarURL
@@ -348,7 +348,7 @@ client.on("message", async message => {
                 }).catch(function(err){
                     message.channel.send({embed: {
                         color: 15406156,
-                        description: `Oops! ${username} does not exist in the Roblox user database. Perhaps you misspelled?`,
+                        description: `${username} does not exist in the RCD Group. Perhaps you misspelled?`,
                         author: {
                             name: message.author.tag,
                             icon_url: message.author.displayAvatarURL
@@ -358,7 +358,7 @@ client.on("message", async message => {
             } else {
                 message.channel.send({embed: {
                     color: 15406156,
-                    description: "Please specify a target username.",
+                    description: "Please specify a Roblox username.",
                     author: {
                         name: message.author.tag,
                         icon_url: message.author.displayAvatarURL
@@ -369,10 +369,10 @@ client.on("message", async message => {
     }
 
     if(command === "fire") {
-        if(!message.member.roles.some(r=>["Ranking Permissions"].includes(r.name)) )
+        if(!message.member.roles.some(r=>["RCD Ranking Perms"].includes(r.name)) )
             return message.channel.send({embed: {
                 color: 15406156,
-                description: "You need the `Ranking Permissions` role to run this command.",
+                description: "You need the `RCD Ranking Perms` role to run this command.",
                 author: {
                     name: message.author.tag,
                     icon_url: message.author.displayAvatarURL
@@ -387,7 +387,7 @@ client.on("message", async message => {
                         if(config.maximumRank <= rank){
                             message.channel.send({embed: {
                                 color: 15406156,
-                                description: "This rank cannot be ranked by this bot.",
+                                description: "This rank cannot be ranked by PhantomRank.",
                                 author: {
                                     name: message.author.tag,
                                     icon_url: message.author.displayAvatarURL
@@ -425,7 +425,7 @@ client.on("message", async message => {
                                 console.log(chalk.red('Issue with setRank (fire): ' + err));
                                 message.channel.send({embed: {
                                     color: 15406156, 
-                                    description: "Oops! Something went wrong. The issue has been logged to the bot console.",
+                                    description: "Something went wrong. The issue has been logged.",
                                     author: {
                                         name: message.author.tag,
                                         icon_url: message.author.displayAvatarURL
@@ -436,7 +436,7 @@ client.on("message", async message => {
                     }).catch(function(err){
                         message.channel.send({embed: {
                             color: 15406156,
-                            description: "Oops! Something went wrong. The issue has been logged to the bot console.",
+                            description: "Something went wrong. The issue has been logged.",
                             author: {
                                 name: message.author.tag,
                                 icon_url: message.author.displayAvatarURL
@@ -446,7 +446,7 @@ client.on("message", async message => {
                 }).catch(function(err){
                     message.channel.send({embed: {
                         color: 15406156,
-                        description: `Oops! ${username} does not exist in the Roblox user database. Perhaps you misspelled?`,
+                        description: `${username} does not exist in the RCD Group. Perhaps you misspelled?`,
                         author: {
                             name: message.author.tag,
                             icon_url: message.author.displayAvatarURL
@@ -456,7 +456,7 @@ client.on("message", async message => {
             } else {
                 message.channel.send({embed: {
                     color: 15406156,
-                    description: "Please specify a target username.",
+                    description: "Please specify a Roblox username.",
                     author: {
                         name: message.author.tag,
                         icon_url: message.author.displayAvatarURL
@@ -513,10 +513,10 @@ client.on("message", async message => {
     }
 
     if(command === 'clearshout'){
-        if(!message.member.roles.some(r=>["Ranking Permissions", "Shout Permissions"].includes(r.name)) )
+        if(!message.member.roles.some(r=>["RCD Ranking Perms", "Shout Permissions"].includes(r.name)) )
         return message.channel.send({embed: {
             color: 15406156,
-            description: "You need the `Ranking Permissions` or `Shout Permissions` role to run this command.",
+            description: "You need the `RCD Ranking Perms` or `Shout Permissions` role to run this command.",
             author: {
                 name: message.author.tag,
                 icon_url: message.author.displayAvatarURL
