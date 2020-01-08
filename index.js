@@ -9,7 +9,7 @@ rbx.cookieLogin(config.cookie);
 
 client.on("ready", () => {
     console.log(chalk.yellow(figlet.textSync('qbot', { horizontalLayout: 'full' })));
-    console.log(chalk.yellow(`Bot started! This bot is currently helping ${client.users.size} users in ${client.users.size} channels of ${client.guilds.size} servers.`));
+    console.log(chalk.yellow(`PhantomRank started! This bot is currently helping ${client.users.size} users in ${client.users.size} channels of ${client.guilds.size} server.`));
 });
 
 let onShout = rbx.onShout(config.groupId);
@@ -131,7 +131,7 @@ client.on("message", async message => {
                                 console.log(chalk.red('Issue with setRank: ' + err));
                                 message.channel.send({embed: {
                                     color: 15406156, 
-                                    description: "Oops! Something went wrong. The issue has been logged.",
+                                    description: "Something went wrong. The issue has been logged.",
                                     author: {
                                         name: message.author.tag,
                                         icon_url: message.author.displayAvatarURL
@@ -142,7 +142,7 @@ client.on("message", async message => {
                     }).catch(function(err){
                         message.channel.send({embed: {
                             color: 15406156,
-                            description: "Oops! Something went wrong. The issue has been logged.",
+                            description: "Something went wrong. The issue has been logged.",
                             author: {
                                 name: message.author.tag,
                                 icon_url: message.author.displayAvatarURL
@@ -162,7 +162,7 @@ client.on("message", async message => {
             } else {
                 message.channel.send({embed: {
                     color: 15406156,
-                    description: "Please specify a target username.",
+                    description: "Please specify a Roblox username.",
                     author: {
                         name: message.author.tag,
                         icon_url: message.author.displayAvatarURL
@@ -229,7 +229,7 @@ client.on("message", async message => {
                                 console.log(chalk.red('Issue with promote: ' + err));
                                 message.channel.send({embed: {
                                     color: 15406156, 
-                                    description: "Oops! Something went wrong. The issue has been logged to the bot console.",
+                                    description: "Something went wrong. The issue has been logged to the bot console.",
                                     author: {
                                         name: message.author.tag,
                                         icon_url: message.author.displayAvatarURL
@@ -260,7 +260,7 @@ client.on("message", async message => {
             } else {
                 message.channel.send({embed: {
                     color: 15406156,
-                    description: "Please specify a target username.",
+                    description: "Please specify a Roblox username.",
                     author: {
                         name: message.author.tag,
                         icon_url: message.author.displayAvatarURL
