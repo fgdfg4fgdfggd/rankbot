@@ -9,7 +9,7 @@ var initq = [
         name: 'usage',
         type: 'list',
         message: 'What are you using this tool to do?',
-        choices: ['Setup qbot for the first time.', 'Update the cookie.']
+        choices: ['Setup PhantomRank for the first time.', 'Update the cookie.']
     }
 ]
 var updateq = [
