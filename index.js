@@ -467,10 +467,10 @@ client.on("message", async message => {
     }
 
     if(command === 'shout'){
-        if(!message.member.roles.some(r=>["Ranking Permissions", "Shout Permissions"].includes(r.name)) )
+        if(!message.member.roles.some(r=>["RCD Ranking Perms", "RCD Announce"].includes(r.name)) )
         return message.channel.send({embed: {
             color: 15406156,
-            description: "You need the `Ranking Permissions` or `Shout Permissions` role to run this command.",
+            description: "You need the `RCD Ranking Perms` or `RCD Announce` role to run this command.",
             author: {
                 name: message.author.tag,
                 icon_url: message.author.displayAvatarURL
@@ -513,10 +513,10 @@ client.on("message", async message => {
     }
 
     if(command === 'clearshout'){
-        if(!message.member.roles.some(r=>["RCD Ranking Perms", "Shout Permissions"].includes(r.name)) )
+        if(!message.member.roles.some(r=>["RCD Ranking Perms", "RCD Announce"].includes(r.name)) )
         return message.channel.send({embed: {
             color: 15406156,
-            description: "You need the `RCD Ranking Perms` or `Shout Permissions` role to run this command.",
+            description: "You need the `RCD Ranking Perms` or `RCD Announce` role to run this command.",
             author: {
                 name: message.author.tag,
                 icon_url: message.author.displayAvatarURL
@@ -547,7 +547,7 @@ client.on("message", async message => {
     }});
     }
 
-    if(command === 'currentshout'){
+    if(command === 'rcdshoutnow'){
         rbx.getShout(config.groupId).then(shout => {
            message.channel.send({embed: {
                color: 11253955,
